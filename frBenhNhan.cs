@@ -286,31 +286,31 @@ namespace QuanLyBenhNhan
 
         private void btn_sort_Click(object sender, EventArgs e)
         {
-            //string sql_sort = " select bn.MaHoSo, TenBN,NgaySinh,GioiTinh,bn.MaLoaiBN, TenLoai from BenhNhan bn inner join LoaiBN LBn on bn.MaLoaiBN=LBn.MaLoaiBN order by TenBN Asc";
-            //Functions.RunSql(sql_sort);
-            //LoadDataGridView();
-            string sql_sort = " select TenBN from BenhNhan";
-           List<string> list = new List<string>();
-            var name = "";
-            Connect();
-            SqlCommand cmd = new SqlCommand(sql_sort,Con);
-            SqlDataReader reader;
-            reader = cmd.ExecuteReader();
-            if (reader.HasRows)
-            {
-                while (reader.Read())
-                    name = reader.GetString("TenBN");
-                list.Add(name);
+            string sql_sort = " select bn.MaHoSo, TenBN,NgaySinh,GioiTinh,bn.MaLoaiBN, TenLoai from BenhNhan bn inner join LoaiBN LBn on bn.MaLoaiBN=LBn.MaLoaiBN order by TenBN Asc";
+           Functions.RunSql(sql_sort);
+           LoadDataGridView();
+           // string sql_sort_1 = " select TenBN from BenhNhan";
+           //List<string> list = new List<string>();
+           // var name = "";
+           // Connect();
+           // SqlCommand cmd = new SqlCommand(sql_sort,Con);
+           // SqlDataReader reader;
+           // reader = cmd.ExecuteReader();
+           // if (reader.HasRows)
+           // {
+           //     while (reader.Read())
+           //         name = reader.GetString("TenBN");
+           //     list.Add(name);
               
-            }
-            else
-            {
-                reader.Close();
-            }
-            for( int i = 0; i < list.Count; i++)
-            {
-                list[i].ToString();
-            }
+           // }
+           // else
+           // {
+           //     reader.Close();
+           // }
+           // for( int i = 0; i < list.Count; i++)
+           // {
+           //     list[i].ToString();
+           // }
         }
 
         private void button1_Click(object sender, EventArgs e)

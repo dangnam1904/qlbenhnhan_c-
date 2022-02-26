@@ -71,9 +71,9 @@ namespace QuanLyBenhNhan
             this.panel2.Controls.Add(this.btn_find_maHso);
             this.panel2.Controls.Add(this.btn_edit);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 425);
+            this.panel2.Location = new System.Drawing.Point(0, 538);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(959, 10);
+            this.panel2.Size = new System.Drawing.Size(959, 112);
             this.panel2.TabIndex = 13;
             // 
             // button1
@@ -244,7 +244,7 @@ namespace QuanLyBenhNhan
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(0, 224);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(959, 211);
+            this.panel3.Size = new System.Drawing.Size(959, 426);
             this.panel3.TabIndex = 14;
             // 
             // Gridview_Thuoc
@@ -254,7 +254,7 @@ namespace QuanLyBenhNhan
             this.Gridview_Thuoc.Location = new System.Drawing.Point(0, 0);
             this.Gridview_Thuoc.Name = "Gridview_Thuoc";
             this.Gridview_Thuoc.RowTemplate.Height = 25;
-            this.Gridview_Thuoc.Size = new System.Drawing.Size(959, 211);
+            this.Gridview_Thuoc.Size = new System.Drawing.Size(959, 426);
             this.Gridview_Thuoc.TabIndex = 0;
             this.Gridview_Thuoc.Click += new System.EventHandler(this.Gridview_Thuoc_Click);
             // 
@@ -325,7 +325,7 @@ namespace QuanLyBenhNhan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(959, 435);
+            this.ClientSize = new System.Drawing.Size(959, 650);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);

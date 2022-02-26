@@ -50,6 +50,7 @@ namespace QuanLyBenhNhan
         {
             ResetValues();
             cb_makhoa.Enabled = true;
+            btn_add.Enabled = false;
         }
 
         private void ResetValues()
@@ -91,11 +92,13 @@ namespace QuanLyBenhNhan
                 cb_makhoa.Focus();
                 return;
             }
+            btn_add.Enabled = true;
             LoadDataGridView(); //Nạp lại DataGridView
         }
 
         private void btn_delete_Click(object sender, EventArgs e)
         {
+           
             if (khoa.Rows.Count == 0)
             {
                 MessageBox.Show("Không còn dữ liệu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -106,7 +109,7 @@ namespace QuanLyBenhNhan
                 MessageBox.Show("Bạn chưa chọn bản ghi nào", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-            if (MessageBox.Show("Bạn có muốn xoá không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("Bạn có muốn xoá khoa " +cbo_tenkhoa.Text+ " không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 string check_fk = "select makhoa from bacsi where makhoa=N'"+cb_makhoa.Text.Trim()+"'";
                 string check_fk_BNNN = "select makhoa from BN_Noitru where makhoa=N'" + cb_makhoa.Text.Trim() + "'";
@@ -129,6 +132,7 @@ namespace QuanLyBenhNhan
         private void btn_edit_Click(object sender, EventArgs e)
         {
             cb_makhoa.Enabled = false;
+            btn_save.Enabled = false;
 
 
             if (khoa.Rows.Count == 0)
@@ -191,6 +195,10 @@ namespace QuanLyBenhNhan
         private void refresh_Click(object sender, EventArgs e)
         {
             LoadDataGridView();
+            btn_add.Enabled = true;
+            btn_edit.Enabled = true;
+            btn_save.Enabled = true;
+            btn_delete.Enabled = true;
         }
 
         private void cb_maThuoc_SelectedIndexChanged(object sender, EventArgs e)

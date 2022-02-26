@@ -238,6 +238,7 @@ namespace QuanLyBenhNhan
             }
             LoadDataGridView(); //Nạp lại DataGridView
             btn_add.Enabled = true;
+            btn_edit.Enabled = true;
 
         }
 
@@ -287,6 +288,8 @@ namespace QuanLyBenhNhan
             String edit_BN_NoiTru = "update BN_NoiTru set NgayNhapVien='"+date_nhapvien.Value+"',NgayRaVien='"+date_ravien.Value+"', ChuanDoanBenh=N'"+txt_chuandoanbenh.Text.Trim()+"',SoGiuong="+txt_sogiuong.Text.Trim()+",MaKhoa='"+cb_maKhoa.Text.Trim()+"' where Ma_NoiTru='"+cb_maNoiTru.Text.Trim()+"' ";
             Functions.RunSql(edit_BN_NoiTru);
             LoadDataGridView(); //Nạp lại DataGridView
+            btn_add.Enabled = true;
+            btn_edit.Enabled = true;
         }
 
         private void btn_delete_Click(object sender, EventArgs e)
@@ -302,7 +305,7 @@ namespace QuanLyBenhNhan
                 MessageBox.Show("Bạn chưa chọn bản ghi nào", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-            if (MessageBox.Show("Bạn có muốn xoá không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("Bạn có muốn xoá bệnh nhân "+cb_TenBn.Text+" không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                string sql = "DELETE BN_NoiTru WHERE Ma_NoiTru='" + cb_maNoiTru.Text.Trim() + " '";
                 Functions.RunSql(sql);
@@ -439,7 +442,11 @@ namespace QuanLyBenhNhan
             cb_TenBacSi.Text = Functions.GetFieldValues(str);
         }
 
-       
+        private void txt_sogiuong_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != (char)Keys.Back)
+                e.Handled = true;
+        }
     }
     
 }

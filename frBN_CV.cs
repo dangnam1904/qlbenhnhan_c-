@@ -206,7 +206,7 @@ namespace QuanLyBenhNhan
             }
             else
             {
-                sql = "update benhnhan set mahoso='"+cb_maHS.Text.Trim()+"', TenBN= N'"+cb_TenBn.Text.Trim()+"',NgaySinh ='"+date_ngaysinh.Value+ "', MaLoaiBN='BN_CV' where mahoso='"+cb_maHS.Text.Trim()+"'";
+                sql = "update benhnhan set mahoso='"+cb_maHS.Text.Trim()+"', TenBN= N'"+cb_TenBn.Text.Trim()+"',NgaySinh ='"+date_ngaysinh.Value+ "', MaLoaiBN='BN_CV' where mahoso=N'"+cb_maHS.Text.Trim()+"'";
                 Functions.RunSql(sql);
                 String check_maBs = "select MaBacSi from BacSi where MaBacSi='" + cb_mabacsi.Text.Trim() + "' ";
                 if (Functions.CheckKey(check_maBs) == false)

@@ -272,6 +272,7 @@ namespace QuanLyBenhNhan
             this.txt_sogiuong.Name = "txt_sogiuong";
             this.txt_sogiuong.Size = new System.Drawing.Size(54, 23);
             this.txt_sogiuong.TabIndex = 13;
+            this.txt_sogiuong.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_sogiuong_KeyPress);
             // 
             // label7
             // 
@@ -328,7 +329,6 @@ namespace QuanLyBenhNhan
             this.label4.Size = new System.Drawing.Size(70, 15);
             this.label4.TabIndex = 4;
             this.label4.Text = "Bác sĩ khám";
-    
             // 
             // label3
             // 

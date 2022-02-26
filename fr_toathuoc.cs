@@ -66,6 +66,8 @@ namespace QuanLyBenhNhan
         {
             ResetValues();
             cb_matoathuoc.Enabled = true;
+            btn_add.Enabled = false;
+
         }
 
         private void ResetValues()
@@ -107,6 +109,7 @@ namespace QuanLyBenhNhan
                 cb_matoathuoc.Focus();
                 return;
             }
+            btn_add.Enabled = true;
             LoadDataGridView(); //Nạp lại DataGridView
         }
 
@@ -122,9 +125,9 @@ namespace QuanLyBenhNhan
                 MessageBox.Show("Bạn chưa chọn bản ghi nào", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-            if (MessageBox.Show("Bạn có muốn xoá không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("Bạn có muốn xoá thuốc:  "+cbo_tenthuoc.Text + " không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                string check_fk ="select matoathuoc from toathuoc where matoathuoc=N'"+cbo_tenthuoc.Text.Trim()+"'";
+                string check_fk ="select matoathuoc from BN_NgoaiTru where matoathuoc=N'"+cb_matoathuoc.Text.Trim()+"'";
                 if(Functions.CheckKey(check_fk))
                 {
                     MessageBox.Show("Thuốc này đã từng bán cho bệnh nhân", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -145,7 +148,7 @@ namespace QuanLyBenhNhan
         private void btn_edit_Click(object sender, EventArgs e)
         {
             cb_matoathuoc.Enabled = false;
-          
+            btn_save.Enabled = false;
 
             if (thuoc.Rows.Count == 0)
             {
@@ -207,6 +210,10 @@ namespace QuanLyBenhNhan
         private void button1_Click(object sender, EventArgs e)
         {
             LoadDataGridView();
+            btn_save.Enabled = true;
+            btn_edit.Enabled=true;
+            btn_delete.Enabled=true;
+            btn_add.Enabled=true;
         }
 
         private void cb_maThuoc_SelectedIndexChanged(object sender, EventArgs e)

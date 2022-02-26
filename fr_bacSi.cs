@@ -186,7 +186,7 @@ namespace QuanLyBenhNhan
                 MessageBox.Show("Bạn chưa chọn bản ghi nào", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-            if (MessageBox.Show("Bạn có muốn xoá không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("Bạn có muốn xoá bác sĩ " +cb_TenBacSi.Text +" không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 string sql_check_NTRu = "select mabacsi from BN_NoiTru where MabacSi= N'" + cb_maBs.Text.Trim() + "'";
                 string sql_check_NgTRu = "select mabacsi from BN_NgoaiTru where MabacSi= N'" + cb_maBs.Text.Trim() + "'";

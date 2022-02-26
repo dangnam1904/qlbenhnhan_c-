@@ -270,9 +270,9 @@ namespace QuanLyBenhNhan
                 MessageBox.Show("Bạn chưa chọn bản ghi nào", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-            if (MessageBox.Show("Bạn có muốn xoá không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("Bạn có muốn xoá bệnh nhân "+cb_TenBn.Text+ " không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                string sql = "DELETE BN_NgoaiTru WHERE Ma_NgoaiTru='" + cb_maNgtru.Text.Trim() + " '";
+                string sql = "DELETE BN_NgoaiTru WHERE Ma_NgoaiTru=N'" + cb_maNgtru.Text.Trim() + " '";
                 Functions.RunSql(sql);
                 LoadDataGridView();
                 Resetvalues();
@@ -283,7 +283,7 @@ namespace QuanLyBenhNhan
         {
             cb_maNgtru.Enabled = false;
             btn_save.Enabled = false;
-            
+                      
 
             if (bn_ngoaitru.Rows.Count == 0)
             {
