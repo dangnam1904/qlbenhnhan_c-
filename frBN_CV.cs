@@ -411,6 +411,10 @@ namespace QuanLyBenhNhan
         {
            
         }
-     
+
+        private void Gridview_BN_CV_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

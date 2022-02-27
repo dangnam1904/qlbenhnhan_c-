@@ -309,13 +309,7 @@ namespace QuanLyBenhNhan
                 string sql_1 = "Update BenhNhan set MaHoSo='" + cb_maHS.Text.Trim() + "', TenBN=N'" + cb_TenBn.Text.Trim() + "',NgaySinh='" + date_ngaysinh.Value + "', GioiTinh=N'" + gioitinh + "' Where MaHoSo='" + cb_maHS.Text.Trim() + "'  ";
                 Functions.RunSql(sql_1);
             }
-            string Sql_check_BHYT = "select SoBHYT from BN_NgoaiTru where Ma_NgoaiTru =N'" + cb_maNgtru.Text.Trim() + "'";
-            if (Functions.CheckKey(Sql_check_BHYT))
-            {
-                MessageBox.Show("Số bảo hiểm y tế đã tồn tại, bạn phải nhập mã khác", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txt_BHYT.Focus();
-                return;
-            }
+           
             string edit_Bsi = "update BacSi set TenBacSi=N'" + cb_TenBacSi.Text.Trim() + "' where MaBacSi ='" + cb_mabacsi.Text.Trim() + "'";
             Functions.RunSql(edit_Bsi);
             String edit_BN_NoiTru = "update BN_NgoaiTru set NgayKham='"+date_ngaykham.Value+"', SoBHYT='"+txt_BHYT.Text.Trim()+"', MaToaThuoc='"+cb_matoathuoc.Text.Trim()+"' ";
@@ -486,6 +480,16 @@ namespace QuanLyBenhNhan
             str = "SELECT TenBacSi FROM BacSi join Khoa on Khoa.MaKhoa= BacSi.MaKhoa where Khoa.MaKhoa=N'" + cb_maKhoa.Text + "'";
             cb_TenBacSi.Text = Functions.GetFieldValues(str);
          
+
+        }
+
+        private void txt_find_by_ma_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_find_by_name_TextChanged(object sender, EventArgs e)
+        {
 
         }
 

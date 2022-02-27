@@ -49,7 +49,8 @@ namespace QuanLyBenhNhan
             Gridview_BN.Columns[2].HeaderText = "Ngày sinh";
             Gridview_BN.Columns[3].HeaderText = "Giới tính ";
             Gridview_BN.Columns[4].HeaderText = "Mã loại ";
-            Gridview_BN.Columns[5].HeaderText = "TenLoai";
+            Gridview_BN.Columns[5].HeaderText = "Tên Loại";
+            Gridview_BN.Columns[5].Width = 300;
            
           
             Gridview_BN.AllowUserToAddRows = false; //Không cho người dùng thêm dữ liệu trực tiếp

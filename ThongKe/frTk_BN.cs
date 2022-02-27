@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -96,59 +97,62 @@ namespace QuanLyBenhNhan.ThongKe
                 COMExcel.Worksheet exSheet; //Trong 1 Workbook có nhiều Worksheet
                 COMExcel.Range exRange;
                 string sql;
+            var excelApp = new Microsoft.Office.Interop.Excel.Application();
+            // Make the object visible.
+            excelApp.Visible = true;
 
+            // Create a new, empty workbook and add it to the collection returned
+            // by property Workbooks. The new workbook becomes the active workbook.
+            // Add has an optional parameter for specifying a praticular template.
+            // Because no argument is sent in this example, Add creates a new workbook.
+            excelApp.Workbooks.Add();
+
+            // This example uses a single workSheet.
+            Microsoft.Office.Interop.Excel._Worksheet workSheet = excelApp.ActiveSheet;
             DataTable dulieu; 
                 exBook = exApp.Workbooks.Add(COMExcel.XlWBATemplate.xlWBATWorksheet);
                 exSheet = exBook.Worksheets[1];
                 // Định dạng chung
                 exRange = exSheet.Cells[1, 1];
                 exRange.Range["A1:Z300"].Font.Name = "Times new roman"; //Font chữ
-                exRange.Range["A1:B3"].Font.Size = 10;
-                exRange.Range["A1:B3"].Font.Bold = true;
-                exRange.Range["A1:B3"].Font.ColorIndex = 5; //Màu xanh da trời
-                exRange.Range["A1:A1"].ColumnWidth = 7;
-                exRange.Range["B1:B1"].ColumnWidth = 15;
-                exRange.Range["A1:B1"].MergeCells = true;
-                exRange.Range["A1:B1"].HorizontalAlignment = COMExcel.XlHAlign.xlHAlignCenter;
-                exRange.Range["A1:B1"].Value = "Shop B.A.";
-                exRange.Range["A2:B2"].MergeCells = true;
-                exRange.Range["A2:B2"].HorizontalAlignment = COMExcel.XlHAlign.xlHAlignCenter;
-                exRange.Range["A2:B2"].Value = "Chùa Bộc - Hà Nội";
-                exRange.Range["A3:B3"].MergeCells = true;
-                exRange.Range["A3:B3"].HorizontalAlignment = COMExcel.XlHAlign.xlHAlignCenter;
-                exRange.Range["A3:B3"].Value = "Điện thoại: (04)38526419";
-                exRange.Range["C2:E2"].Font.Size = 16;
-                exRange.Range["C2:E2"].Font.Bold = true;
-                exRange.Range["C2:E2"].Font.ColorIndex = 3; //Màu đỏ
-                exRange.Range["C2:E2"].MergeCells = true;
-                exRange.Range["C2:E2"].HorizontalAlignment = COMExcel.XlHAlign.xlHAlignCenter;
+               
                 exRange.Range["C2:E2"].Value = "Danh sách bệnh nhân";
                 // Biểu diễn thông tin chung của hóa đơn bán
              sql = " select bn.MaHoSo, TenBN,NgaySinh,GioiTinh,bn.MaLoaiBN, TenLoai from BenhNhan bn inner join LoaiBN LBn on bn.MaLoaiBN=LBn.MaLoaiBN";
 
             dulieu = Functions.GetDataTable(sql);
-                exRange.Range["B6:G34"].Font.Size = 12;
-                exRange.Range["B6:B6"].Value = "Mã hồ sơ";
-                exRange.Range["C6:C6"].Value = "Họ tên";
+           exRange.Range["B6:G34"].Font.Size = 12;
+            exRange.Range["B6:B6"].Value = "Mã hồ sơ";
+            exRange.Range["C6:C6"].Value = "Họ tên";
             exRange.Range["C6:C6"].ColumnWidth = 20;
             exRange.Range["D6:D6"].Value = "Ngày sinh";
+            exRange.Range["D6:D6"].ColumnWidth = 20;
             exRange.Range["E6:E6"].Value = "Giới tính";
             exRange.Range["F6:F6"].Value = "Mã loại";
             exRange.Range["G6:G6"].Value = "Tên Loại";
             exRange.Range["G6:G6"].ColumnWidth = 20;
-            foreach (DataRow row in dulieu.Rows)
-            {
-                var a = row["MaHoSo"];
-                exRange.Range["C7:C7"].Value = a;
-                exRange.Range["C8:C8"].Value = row["MaHoSo"];
-            }
-          
-            //    exRange.Range["C7:C7"].Value = tblThongtinHD.Rows[0][1].ToString();
-            //exRange.Range["D7:D7"].Value = tblThongtinHD.Rows[0][2].ToString();
-            //exRange.Range["E7:E7"].Value = tblThongtinHD.Rows[0][3].ToString();
-            //string a= tblThongtinHD.Rows[0][5].ToString();
-            //exRange.Range["F7:F7"].Value = tblThongtinHD.Rows[0][4].ToString();
-            //exRange.Range["G7:G7"].Value = tblThongtinHD.Rows[0][5].ToString();
+           
+            //int r = 1;
+            //foreach (DataRow row in dulieu.Rows)
+            //{
+              
+            //    //workSheet.Cells[row, "A"] = "ạdf";
+            //    //workSheet.Cells[row, "B"] = "fgignf";
+            //    //workSheet.Cells[row, "C"] = row["NgaySinh"];
+            //    //workSheet.Cells[row, "D"] = row["GioiTinh"];
+            //    //workSheet.Cells[row, "E"] = row[" MaLoaiBN"];
+            //    //workSheet.Cells[row, "E"] = row[" TenLoai"];
+            //   // exRange.Range["C8:C8"].Value = row["MaHoSo"];
+            //}
+            exRange.Range["B7:B7"].Value = dulieu.Rows[0][0].ToString();
+            exRange.Range["C7:C7"].Value = dulieu.Rows[0][1].ToString();
+            string a= dulieu.Rows[0][2].ToString();
+            string sub_a = a.Substring(0, 10);
+            exRange.Range["D7:D7"].Value = sub_a;
+            exRange.Range["E7:E7"].Value = dulieu.Rows[0][3].ToString();
+       
+            exRange.Range["F7:F7"].Value = dulieu.Rows[0][4].ToString();
+            exRange.Range["G7:G7"].Value = dulieu.Rows[0][5].ToString();
             exApp.Visible = true;
             
         }

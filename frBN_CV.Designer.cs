@@ -77,7 +77,7 @@ namespace QuanLyBenhNhan
             // checkbox_nu
             // 
             this.checkbox_nu.AutoSize = true;
-            this.checkbox_nu.Location = new System.Drawing.Point(305, 158);
+            this.checkbox_nu.Location = new System.Drawing.Point(333, 158);
             this.checkbox_nu.Name = "checkbox_nu";
             this.checkbox_nu.Size = new System.Drawing.Size(42, 19);
             this.checkbox_nu.TabIndex = 7;
@@ -91,14 +91,15 @@ namespace QuanLyBenhNhan
             this.Gridview_BN_CV.Location = new System.Drawing.Point(0, 0);
             this.Gridview_BN_CV.Name = "Gridview_BN_CV";
             this.Gridview_BN_CV.RowTemplate.Height = 25;
-            this.Gridview_BN_CV.Size = new System.Drawing.Size(1147, 185);
+            this.Gridview_BN_CV.Size = new System.Drawing.Size(1306, 346);
             this.Gridview_BN_CV.TabIndex = 0;
+            this.Gridview_BN_CV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Gridview_BN_CV_CellContentClick);
             this.Gridview_BN_CV.Click += new System.EventHandler(this.Gridview_BN_CV_Click);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(728, 92);
+            this.label5.Location = new System.Drawing.Point(845, 86);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(77, 15);
             this.label5.TabIndex = 8;
@@ -107,7 +108,7 @@ namespace QuanLyBenhNhan
             // checkbox_nam
             // 
             this.checkbox_nam.AutoSize = true;
-            this.checkbox_nam.Location = new System.Drawing.Point(247, 158);
+            this.checkbox_nam.Location = new System.Drawing.Point(275, 158);
             this.checkbox_nam.Name = "checkbox_nam";
             this.checkbox_nam.Size = new System.Drawing.Size(52, 19);
             this.checkbox_nam.TabIndex = 6;
@@ -119,7 +120,7 @@ namespace QuanLyBenhNhan
             this.btn_sort.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btn_sort.Image = global::QuanLyBenhNhan.Properties.Resources.alphabetical_sorting_16;
             this.btn_sort.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_sort.Location = new System.Drawing.Point(767, 13);
+            this.btn_sort.Location = new System.Drawing.Point(913, 17);
             this.btn_sort.Name = "btn_sort";
             this.btn_sort.Size = new System.Drawing.Size(155, 27);
             this.btn_sort.TabIndex = 20;
@@ -131,7 +132,7 @@ namespace QuanLyBenhNhan
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(63, 155);
+            this.label3.Location = new System.Drawing.Point(91, 155);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(60, 15);
             this.label3.TabIndex = 4;
@@ -140,7 +141,7 @@ namespace QuanLyBenhNhan
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(34, 123);
+            this.label2.Location = new System.Drawing.Point(62, 123);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(85, 15);
             this.label2.TabIndex = 3;
@@ -151,7 +152,7 @@ namespace QuanLyBenhNhan
             this.btn_save.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btn_save.Image = global::QuanLyBenhNhan.Properties.Resources.save_16__1_;
             this.btn_save.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_save.Location = new System.Drawing.Point(51, 62);
+            this.btn_save.Location = new System.Drawing.Point(197, 66);
             this.btn_save.Name = "btn_save";
             this.btn_save.Size = new System.Drawing.Size(98, 26);
             this.btn_save.TabIndex = 4;
@@ -164,7 +165,7 @@ namespace QuanLyBenhNhan
             this.btn_delete.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btn_delete.Image = global::QuanLyBenhNhan.Properties.Resources.delete_2_16;
             this.btn_delete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_delete.Location = new System.Drawing.Point(198, 15);
+            this.btn_delete.Location = new System.Drawing.Point(344, 19);
             this.btn_delete.Name = "btn_delete";
             this.btn_delete.Size = new System.Drawing.Size(98, 25);
             this.btn_delete.TabIndex = 3;
@@ -177,7 +178,7 @@ namespace QuanLyBenhNhan
             this.btn_edit.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btn_edit.Image = global::QuanLyBenhNhan.Properties.Resources.edit_2_16;
             this.btn_edit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_edit.Location = new System.Drawing.Point(198, 62);
+            this.btn_edit.Location = new System.Drawing.Point(344, 66);
             this.btn_edit.Name = "btn_edit";
             this.btn_edit.Size = new System.Drawing.Size(98, 26);
             this.btn_edit.TabIndex = 2;
@@ -190,7 +191,7 @@ namespace QuanLyBenhNhan
             this.cb_TenBn.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.cb_TenBn.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cb_TenBn.FormattingEnabled = true;
-            this.cb_TenBn.Location = new System.Drawing.Point(138, 115);
+            this.cb_TenBn.Location = new System.Drawing.Point(166, 115);
             this.cb_TenBn.Name = "cb_TenBn";
             this.cb_TenBn.Size = new System.Drawing.Size(197, 23);
             this.cb_TenBn.TabIndex = 2;
@@ -199,7 +200,7 @@ namespace QuanLyBenhNhan
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(63, 86);
+            this.label1.Location = new System.Drawing.Point(91, 86);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(56, 15);
             this.label1.TabIndex = 0;
@@ -208,7 +209,7 @@ namespace QuanLyBenhNhan
             // txt_find_by_ma
             // 
             this.txt_find_by_ma.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txt_find_by_ma.Location = new System.Drawing.Point(539, 61);
+            this.txt_find_by_ma.Location = new System.Drawing.Point(685, 65);
             this.txt_find_by_ma.Name = "txt_find_by_ma";
             this.txt_find_by_ma.Size = new System.Drawing.Size(193, 27);
             this.txt_find_by_ma.TabIndex = 19;
@@ -219,7 +220,7 @@ namespace QuanLyBenhNhan
             this.btn_find_maHso.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btn_find_maHso.Image = global::QuanLyBenhNhan.Properties.Resources.search_9_16;
             this.btn_find_maHso.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_find_maHso.Location = new System.Drawing.Point(323, 62);
+            this.btn_find_maHso.Location = new System.Drawing.Point(469, 66);
             this.btn_find_maHso.Name = "btn_find_maHso";
             this.btn_find_maHso.Size = new System.Drawing.Size(202, 26);
             this.btn_find_maHso.TabIndex = 1;
@@ -234,13 +235,13 @@ namespace QuanLyBenhNhan
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(0, 232);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1147, 185);
+            this.panel3.Size = new System.Drawing.Size(1306, 346);
             this.panel3.TabIndex = 8;
             // 
             // txt_find_by_name
             // 
             this.txt_find_by_name.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txt_find_by_name.Location = new System.Drawing.Point(540, 13);
+            this.txt_find_by_name.Location = new System.Drawing.Point(686, 17);
             this.txt_find_by_name.Name = "txt_find_by_name";
             this.txt_find_by_name.Size = new System.Drawing.Size(192, 27);
             this.txt_find_by_name.TabIndex = 18;
@@ -251,7 +252,7 @@ namespace QuanLyBenhNhan
             this.bt_find_name.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.bt_find_name.Image = global::QuanLyBenhNhan.Properties.Resources.search_9_16;
             this.bt_find_name.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bt_find_name.Location = new System.Drawing.Point(323, 15);
+            this.bt_find_name.Location = new System.Drawing.Point(469, 19);
             this.bt_find_name.Name = "bt_find_name";
             this.bt_find_name.Size = new System.Drawing.Size(202, 25);
             this.bt_find_name.TabIndex = 1;
@@ -289,7 +290,7 @@ namespace QuanLyBenhNhan
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1147, 232);
+            this.panel1.Size = new System.Drawing.Size(1306, 232);
             this.panel1.TabIndex = 6;
             // 
             // label14
@@ -297,18 +298,18 @@ namespace QuanLyBenhNhan
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label14.Location = new System.Drawing.Point(379, 49);
+            this.label14.Location = new System.Drawing.Point(459, 49);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(188, 20);
+            this.label14.Size = new System.Drawing.Size(144, 20);
             this.label14.TabIndex = 38;
-            this.label14.Text = "THÔNG TIN BỆNH NHÂN";
+            this.label14.Text = "THÔNG TIN BÁC SĨ";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label13.Location = new System.Drawing.Point(32, 49);
+            this.label13.Location = new System.Drawing.Point(60, 49);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(188, 20);
             this.label13.TabIndex = 37;
@@ -319,7 +320,7 @@ namespace QuanLyBenhNhan
             this.cb_TenBacSi.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.cb_TenBacSi.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cb_TenBacSi.FormattingEnabled = true;
-            this.cb_TenBacSi.Location = new System.Drawing.Point(498, 156);
+            this.cb_TenBacSi.Location = new System.Drawing.Point(578, 156);
             this.cb_TenBacSi.Name = "cb_TenBacSi";
             this.cb_TenBacSi.Size = new System.Drawing.Size(164, 23);
             this.cb_TenBacSi.TabIndex = 34;
@@ -327,7 +328,7 @@ namespace QuanLyBenhNhan
             // 
             // txt_noichuyen
             // 
-            this.txt_noichuyen.Location = new System.Drawing.Point(814, 136);
+            this.txt_noichuyen.Location = new System.Drawing.Point(931, 130);
             this.txt_noichuyen.Name = "txt_noichuyen";
             this.txt_noichuyen.Size = new System.Drawing.Size(305, 78);
             this.txt_noichuyen.TabIndex = 26;
@@ -338,7 +339,7 @@ namespace QuanLyBenhNhan
             this.cb_mabacsi.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.cb_mabacsi.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cb_mabacsi.FormattingEnabled = true;
-            this.cb_mabacsi.Location = new System.Drawing.Point(498, 80);
+            this.cb_mabacsi.Location = new System.Drawing.Point(578, 80);
             this.cb_mabacsi.Name = "cb_mabacsi";
             this.cb_mabacsi.Size = new System.Drawing.Size(131, 23);
             this.cb_mabacsi.TabIndex = 33;
@@ -347,7 +348,7 @@ namespace QuanLyBenhNhan
             // date_ngaychuyen
             // 
             this.date_ngaychuyen.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.date_ngaychuyen.Location = new System.Drawing.Point(823, 86);
+            this.date_ngaychuyen.Location = new System.Drawing.Point(940, 80);
             this.date_ngaychuyen.Name = "date_ngaychuyen";
             this.date_ngaychuyen.Size = new System.Drawing.Size(108, 23);
             this.date_ngaychuyen.TabIndex = 25;
@@ -355,7 +356,7 @@ namespace QuanLyBenhNhan
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(424, 83);
+            this.label12.Location = new System.Drawing.Point(504, 83);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(57, 15);
             this.label12.TabIndex = 32;
@@ -364,7 +365,7 @@ namespace QuanLyBenhNhan
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(424, 118);
+            this.label8.Location = new System.Drawing.Point(504, 118);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(53, 15);
             this.label8.TabIndex = 31;
@@ -374,7 +375,7 @@ namespace QuanLyBenhNhan
             // 
             this.date_ngaysinh.CustomFormat = "dd/MM/yyyy";
             this.date_ngaysinh.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.date_ngaysinh.Location = new System.Drawing.Point(138, 154);
+            this.date_ngaysinh.Location = new System.Drawing.Point(166, 154);
             this.date_ngaysinh.Name = "date_ngaysinh";
             this.date_ngaysinh.Size = new System.Drawing.Size(103, 23);
             this.date_ngaysinh.TabIndex = 24;
@@ -384,7 +385,7 @@ namespace QuanLyBenhNhan
             this.cb_maKhoa.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.cb_maKhoa.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cb_maKhoa.FormattingEnabled = true;
-            this.cb_maKhoa.Location = new System.Drawing.Point(498, 115);
+            this.cb_maKhoa.Location = new System.Drawing.Point(578, 115);
             this.cb_maKhoa.Name = "cb_maKhoa";
             this.cb_maKhoa.Size = new System.Drawing.Size(121, 23);
             this.cb_maKhoa.TabIndex = 30;
@@ -404,7 +405,7 @@ namespace QuanLyBenhNhan
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(411, 159);
+            this.label4.Location = new System.Drawing.Point(491, 159);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(70, 15);
             this.label4.TabIndex = 29;
@@ -415,7 +416,7 @@ namespace QuanLyBenhNhan
             this.cb_MaCV.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.cb_MaCV.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cb_MaCV.FormattingEnabled = true;
-            this.cb_MaCV.Location = new System.Drawing.Point(138, 194);
+            this.cb_MaCV.Location = new System.Drawing.Point(166, 194);
             this.cb_MaCV.Name = "cb_MaCV";
             this.cb_MaCV.Size = new System.Drawing.Size(137, 23);
             this.cb_MaCV.TabIndex = 20;
@@ -424,7 +425,7 @@ namespace QuanLyBenhNhan
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(32, 194);
+            this.label10.Location = new System.Drawing.Point(60, 194);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(91, 15);
             this.label10.TabIndex = 19;
@@ -435,7 +436,7 @@ namespace QuanLyBenhNhan
             this.cb_maHS.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.cb_maHS.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cb_maHS.FormattingEnabled = true;
-            this.cb_maHS.Location = new System.Drawing.Point(138, 83);
+            this.cb_maHS.Location = new System.Drawing.Point(166, 83);
             this.cb_maHS.Name = "cb_maHS";
             this.cb_maHS.Size = new System.Drawing.Size(133, 23);
             this.cb_maHS.TabIndex = 18;
@@ -443,7 +444,7 @@ namespace QuanLyBenhNhan
             // 
             // txt_cdoanbenh
             // 
-            this.txt_cdoanbenh.Location = new System.Drawing.Point(498, 191);
+            this.txt_cdoanbenh.Location = new System.Drawing.Point(578, 191);
             this.txt_cdoanbenh.Name = "txt_cdoanbenh";
             this.txt_cdoanbenh.Size = new System.Drawing.Size(180, 23);
             this.txt_cdoanbenh.TabIndex = 17;
@@ -451,7 +452,7 @@ namespace QuanLyBenhNhan
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(379, 194);
+            this.label9.Location = new System.Drawing.Point(459, 194);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(102, 15);
             this.label9.TabIndex = 16;
@@ -460,7 +461,7 @@ namespace QuanLyBenhNhan
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(728, 139);
+            this.label6.Location = new System.Drawing.Point(845, 133);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(68, 15);
             this.label6.TabIndex = 10;
@@ -471,7 +472,7 @@ namespace QuanLyBenhNhan
             this.btn_add.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btn_add.Image = global::QuanLyBenhNhan.Properties.Resources.add_16;
             this.btn_add.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_add.Location = new System.Drawing.Point(51, 15);
+            this.btn_add.Location = new System.Drawing.Point(197, 19);
             this.btn_add.Name = "btn_add";
             this.btn_add.Size = new System.Drawing.Size(98, 25);
             this.btn_add.TabIndex = 0;
@@ -492,9 +493,9 @@ namespace QuanLyBenhNhan
             this.panel2.Controls.Add(this.bt_find_name);
             this.panel2.Controls.Add(this.btn_add);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 417);
+            this.panel2.Location = new System.Drawing.Point(0, 578);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1147, 100);
+            this.panel2.Size = new System.Drawing.Size(1306, 105);
             this.panel2.TabIndex = 7;
             // 
             // button1
@@ -502,7 +503,7 @@ namespace QuanLyBenhNhan
             this.button1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button1.Image = global::QuanLyBenhNhan.Properties.Resources.refresh_16;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(767, 61);
+            this.button1.Location = new System.Drawing.Point(913, 65);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(155, 26);
             this.button1.TabIndex = 31;
@@ -514,7 +515,7 @@ namespace QuanLyBenhNhan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1147, 517);
+            this.ClientSize = new System.Drawing.Size(1306, 683);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
